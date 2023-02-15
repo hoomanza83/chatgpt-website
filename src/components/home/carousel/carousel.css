@@ -1,0 +1,27 @@
+.slider {
+  width: 120vh;
+  border-radius: 8px;
+  transform: scale(0.9);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  margin: 30px auto;
+}
+img {
+  height: 800px;
+  border-radius: 8px;
+  transform: scale(0.9);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+  display: block;
+
+  margin: 30px auto;
+}
+
+.slider h3 {
+  font-size: 30px;
+  font-weight: 600;
+  margin: 20px 10px;
+}
+.slider p {
+  font-size: 24px;
+  margin: 20px 10px;
+}

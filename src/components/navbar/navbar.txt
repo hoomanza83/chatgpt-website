@@ -1,0 +1,121 @@
+
+------------------------------------
+
+-------------------------------
+import React, { useState } from "react";
+import "./navbar.css";
+const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const handleToggle = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  return (
+    <nav className="navbar">
+      <a href="#" className="logo">
+        Logo
+      </a>
+      <ul className={`menu ${menuOpen ? "menu-relative" : ""}`}>
+        <li className="menu-item">
+          <a href="#" className="menu-link">
+            Home
+          </a>
+        </li>
+        <li className="menu-item">
+          <a href="#" className="menu-link">
+            About
+          </a>
+        </li>
+        <li className="menu-item">
+          <a href="#" className="menu-link">
+            Services
+          </a>
+        </li>
+        <li className="menu-item">
+          <a href="#" className="menu-link">
+            Contact
+          </a>
+        </li>
+      </ul>
+      <button className="toggle-button" onClick={handleToggle}>
+        &#9776;
+      </button>
+      <ul className={`menu-absolute ${menuOpen ? "show" : ""}`}>
+        <li className="menu-item">
+          <a href="#" className="menu-link">
+            Home
+          </a>
+        </li>
+        <li className="menu-item">
+          <a href="#" className="menu-link">
+            About
+          </a>
+        </li>
+        <li className="menu-item">
+          <a href="#" className="menu-link">
+            Services
+          </a>
+        </li>
+        <li className="menu-item">
+          <a href="#" className="menu-link">
+            Contact
+          </a>
+        </li>
+      </ul>
+    </nav>
+  );
+};
+
+export default Navbar;
+-------------------------------------
+
+.toggle-button {
+  display: none; /* hide toggle button on larger screens */
+  cursor: pointer;
+  padding: 10px;
+  position: relative;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-item {
+  margin: 0 20px;
+}
+
+.menu-link {
+  text-decoration: none;
+  color: #000;
+}
+
+/* responsive styles */
+@media (max-width: 768px) {
+  .menu {
+    display: none; /* hide menu on smaller screens */
+  }
+  .toggle-button {
+    display: block; /* show toggle button on smaller screens */
+  }
+  .menu-relative {
+    position: relative;
+  }
+  .menu-absolute {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #fff;
+    padding: 20px;
+    display: none; /* hide menu by default */
+  }
+  .menu-relative:hover .menu-absolute,
+  .menu-relative:focus-within .menu-absolute {
+    display: block; /* show menu on hover or focus */
+  }
+}

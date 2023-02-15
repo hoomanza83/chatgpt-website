@@ -1,0 +1,35 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background-color: #301515;
+  color: #fff;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+footer nav {
+  margin: 1rem 0;
+  display: flex;
+}
+
+footer nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer nav ul li {
+  margin: 0 1rem;
+}
+
+footer nav a,
+.term-privacy a {
+  color: #fff;
+  text-decoration: none;
+}
